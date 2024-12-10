@@ -1,0 +1,24 @@
+PROJECT :- DOCKER COMPOSE USING BUILD WORDPRESS DB
+
+STEP 1) install DOCKER-COMPOSE 
+	>>curl -SL https://github.com/docker/compose/releases/download/v2.30.3/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+
+STEP 2) give execute permission for docker-copose file path
+	>>sudo chmod +x /usr/local/bin/docker-compose
+			OR
+	>>sudo chmod 755 /usr/local/bin/docker-compose
+
+STEP 3) create folder "wordpress"
+	>>mkdir wordpress
+
+STEP 4) create "wordpress.yml" file and write that file in yml 
+	>>nano wordpress.yml
+	 (code is available in git and PC)
+
+step 5) run the "wordpress.yml" for create wordpress and db container at a time (automation)
+	>>docker-compose -f wordpress.yml up
+
+			OR
+
+step 5) run the service in background of "wordpress.yml" for create wordpress and db container at a time (automation) 
+	>>docker-compose -f wordpress.yml up -d
